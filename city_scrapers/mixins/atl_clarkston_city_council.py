@@ -72,7 +72,11 @@ class AtlClarkstonCityCouncilSpiderMixin(
         end_date_str = end_date.strftime("%Y-%m-%d")
         today_str = today.strftime("%Y-%m-%d")
 
-        ids_str = self.category_id
+        category_id = self.category_id
+        if isinstance(category_id, (list, tuple)):
+            ids_str = ",".join(str(c) for c in category_id)
+        else:
+            ids_str = str(category_id)
         category_filter = f"categoryId+in+({ids_str})"
 
         urls = [

@@ -8,14 +8,7 @@ spider_configs = [
         "name": "atl_clarkston_city_council",
         "agency": "City of Clarkston City Council",
         "agency_name": "City Council of Clarkston",
-        "category_id": "26",
-    },
-    {
-        "class_name": "AtlClarkstonCityCouncilGeneralSpider",
-        "name": "atl_clarkston_city_council_general",
-        "agency": "City of Clarkston City Council General",
-        "agency_name": "City Council of Clarkston",
-        "category_id": "24",
+        "category_id": ["26", "24"],  # City Council + General combined
     },
     {
         "class_name": "AtlClarkstonCityCouncilPlanningZoningBoardSpider",
