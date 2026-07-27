@@ -279,3 +279,6 @@ jobs:
       actions: write
     steps:
       - uses: liskin/gh-workflow-keepalive@v1
+
+# Schedule ownership rebound 2026-07-27: prior owner account deactivated, which made
+# scheduled runs fail at startup. Scheduled runs execute as the last committer here.
